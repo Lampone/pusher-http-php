@@ -289,7 +289,7 @@ class Pusher implements LoggerAwareInterface
      */
     private function validate_socket_id($socket_id)
     {
-        if ($socket_id !== null && !preg_match('/\A\d+\.\d+\z/', $socket_id)) {
+        if ($socket_id !== null) {
             throw new PusherException('Invalid socket ID '.$socket_id);
         }
     }
